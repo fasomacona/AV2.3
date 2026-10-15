@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1. Introducción | Correlación y causalidad</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>2.3 Correlación y causalidad</h1>
+      <p>1. Introducción</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="index.html">Inicio</a>
+      <a href="01-introduccion.html" class="active">1. Introducción</a>
+      <a href="02-por-que-falla.html">2. Por qué falla</a>
+      <a href="03-hacia-causalidad.html">3. Hacia la causalidad</a>
+      <a href="04-aplicaciones.html">4. Aplicaciones</a>
+      <a href="05-buenas-practicas.html">5. Buenas prácticas</a>
+      <a href="ejercicios/ejercicios-manuales.html">Ejercicios</a>
+    </div>
+  </nav>
+
+  <main>
+    <h2>¿Qué es correlación (asociación)?</h2>
+    <p>
+      La <strong>correlación</strong> (o, en general, la asociación estadística) describe que dos variables
+      <strong>varían juntas</strong> de forma sistemática: cuando una sube, la otra tiende a subir o a bajar.
+      Se mide con coeficientes (Pearson, Spearman, Kendall) o con pruebas como \(\chi^2\).
+    </p>
+    <p>
+      Responde a: <em>«¿Se mueven juntas estas variables en los datos?»</em>
+    </p>
+
+    <h2>¿Qué es causalidad?</h2>
+    <p>
+      La <strong>causalidad</strong> afirma que un cambio en \( X \) <strong>produce</strong> un cambio en \( Y \).
+      No basta con observar que covarían: hace falta un argumento sobre el mecanismo y, idealmente,
+      un diseño que aísle el efecto de \( X \).
+    </p>
+    <p>
+      Responde a: <em>«Si intervengo sobre \( X \), ¿cambiará \( Y \)?»</em>
+    </p>
+
+    <h2>Comparación directa</h2>
+    <table>
+      <thead>
+        <tr><th>Aspecto</th><th>Correlación / asociación</th><th>Causalidad</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Qué afirma</td><td>Las variables se mueven juntas</td><td>Un cambio en X produce cambio en Y</td></tr>
+        <tr><td>Datos necesarios</td><td>Observacionales suelen bastar</td><td>Diseño más exigente</td></tr>
+        <tr><td>Herramientas típicas</td><td>\( r \), \( \rho \), \( \tau \), \(\chi^2\)</td><td>Experimentos, cuasi-experimentos, modelos causales</td></tr>
+        <tr><td>Lenguaje correcto</td><td>«Se asocia con…»</td><td>«Causa / aumenta / reduce…» (solo con evidencia)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>¿Por qué se confunden tan a menudo?</h2>
+    <ul>
+      <li>El cerebro busca patrones y relatos de causa-efecto de forma automática.</li>
+      <li>En medios y presentiones, un gráfico con tendencia se vende como “demostración”.</li>
+      <li>Muchas decisiones de negocio se toman sobre datos solo observacionales.</li>
+      <li>Un coeficiente alto y un p-valor pequeño <em>se sienten</em> como prueba fuerte, aunque no lo sean de causalidad.</li>
+    </ul>
+
+    <div class="card warning">
+      <h3 style="margin-top:0;">Regla de oro del analista</h3>
+      <p style="margin-bottom:0;">
+        La correlación es un <strong>excelente punto de partida</strong> para explorar y generar hipótesis.
+        No es, por sí sola, una <strong>prueba de que X causa Y</strong>.
+      </p>
+    </div>
+
+    <div class="nota">
+      En este tema usamos “correlación” en sentido amplio: cualquier asociación estadística
+      (incluidas las de variables categóricas del tema 2.2).
+    </div>
+
+    <p style="margin-top:2rem;">
+      <a class="btn" href="02-por-que-falla.html">Siguiente: Por qué la correlación no basta →</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>Material generado para la asignatura GAD-2401 · Uso educativo</p>
+  </footer>
+</body>
+</html>

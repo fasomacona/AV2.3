@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5. Buenas prácticas | Correlación y causalidad</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>2.3 Correlación y causalidad</h1>
+      <p>5. Buenas prácticas del analista</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="index.html">Inicio</a>
+      <a href="01-introduccion.html">1. Introducción</a>
+      <a href="02-por-que-falla.html">2. Por qué falla</a>
+      <a href="03-hacia-causalidad.html">3. Hacia la causalidad</a>
+      <a href="04-aplicaciones.html">4. Aplicaciones</a>
+      <a href="05-buenas-practicas.html" class="active">5. Buenas prácticas</a>
+      <a href="ejercicios/ejercicios-manuales.html">Ejercicios</a>
+    </div>
+  </nav>
+
+  <main>
+    <h2>Checklist antes de comunicar un hallazgo correlacional</h2>
+    <ol>
+      <li>☐ Visualicé la relación (scatter, barras, series temporales).</li>
+      <li>☐ Elegí un coeficiente/prueba adecuado al tipo de dato.</li>
+      <li>☐ Reporté magnitud, p-valor y \( n \).</li>
+      <li>☐ Busqué confusoras obvias y las mencioné si son relevantes.</li>
+      <li>☐ Consideré temporalidad y posible causalidad inversa.</li>
+      <li>☐ Usé lenguaje de <strong>asociación</strong>, no de causa (salvo evidencia causal real).</li>
+      <li>☐ Indiqué limitaciones y próximos pasos (p. ej. experimento).</li>
+    </ol>
+
+    <h2>Lenguaje recomendado</h2>
+    <table>
+      <thead>
+        <tr><th>Evitar</th><th>Preferir</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>«X causa Y»</td><td>«X se asocia con Y»</td></tr>
+        <tr><td>«Demostramos que…»</td><td>«Los datos muestran una asociación…»</td></tr>
+        <tr><td>«Si aumentamos X, Y subirá»</td><td>«Si la relación fuera causal, esperaríamos…; hace falta validarlo»</td></tr>
+        <tr><td>«No hay relación» (solo porque p &gt; 0.05)</td><td>«No hay evidencia suficiente de asociación en esta muestra»</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Plantilla de redacción</h2>
+    <div class="card success">
+      <p style="margin-bottom:0; font-style:italic;">
+        «Se encontró una asociación positiva moderada entre la inversión en publicidad digital y las ventas
+        mensuales (Spearman ρ = 0.58, p &lt; 0.001, n = 36). El patrón es compatible con un efecto de la
+        publicidad, pero también con factores confusores como la estacionalidad. Los datos son observacionales;
+        no permiten afirmar causalidad. Se recomienda un diseño experimental o cuasi-experimental de presupuesto
+        por canal para estimar el impacto.»
+      </p>
+    </div>
+
+    <h2>Señales de alerta en un informe ajeno</h2>
+    <ul>
+      <li>Solo muestran el coeficiente, sin gráfico ni \( n \).</li>
+      <li>Saltan de “correlaciona” a “por tanto debemos hacer X” sin más evidencia.</li>
+      <li>Ignoran outliers o cambios de régimen en el tiempo.</li>
+      <li>Prueban docenas de variables y reportan solo las significativas.</li>
+    </ul>
+
+    <h2>Cierre del bloque de correlación (temas 2.1–2.3)</h2>
+    <table>
+      <thead>
+        <tr><th>Tema</th><th>Aporte</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2.1</td><td>Medir asociación numérica/ordinal (Pearson, Spearman, Kendall)</td></tr>
+        <tr><td>2.2</td><td>Asociación entre categóricas (\(\chi^2\), Phi, V)</td></tr>
+        <tr><td>2.3</td><td>Interpretar sin confundir asociación y causa-efecto</td></tr>
+      </tbody>
+    </table>
+
+    <div class="nota">
+      Un analista sólido no es quien encuentra el coeficiente más alto, sino quien
+      <strong>interpreta con honestidad</strong> lo que los datos permiten concluir.
+    </div>
+
+    <p style="margin-top:2rem;">
+      <a class="btn btn-outline" href="04-aplicaciones.html">← Anterior</a>
+      <a class="btn" href="ejercicios/ejercicios-manuales.html">Ir a Ejercicios →</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>Material generado para la asignatura GAD-2401 · Uso educativo</p>
+  </footer>
+</body>
+</html>

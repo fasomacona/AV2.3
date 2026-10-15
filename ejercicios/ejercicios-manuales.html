@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios manuales | Correlación y causalidad</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>2.3 Correlación y causalidad</h1>
+      <p>Ejercicios manuales (resolver en cuaderno)</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="../index.html">Inicio</a>
+      <a href="../01-introduccion.html">1. Introducción</a>
+      <a href="../02-por-que-falla.html">2. Por qué falla</a>
+      <a href="../03-hacia-causalidad.html">3. Hacia la causalidad</a>
+      <a href="../04-aplicaciones.html">4. Aplicaciones</a>
+      <a href="../05-buenas-practicas.html">5. Buenas prácticas</a>
+      <a href="ejercicios-manuales.html" class="active">Ejercicios</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="card warning">
+      <h3 style="margin-top:0;">Instrucciones</h3>
+      <p style="margin-bottom:0;">
+        Estos ejercicios son de <strong>razonamiento y redacción</strong>. Responde con frases completas.
+        No hace falta calcular coeficientes salvo que se indique.
+      </p>
+    </div>
+
+    <h2>Ejercicio 1 – Clasificar el mecanismo</h2>
+    <p>Para cada caso, indica si el problema principal parece <strong>confusora</strong>, <strong>causalidad inversa</strong>, <strong>espuria</strong> o <strong>posible causa real</strong> (aún no demostrada). Justifica en 2–3 líneas.</p>
+    <ol>
+      <li>En ciudades con más iglesias hay más criminalidad reportada.</li>
+      <li>Los días en que más gente usa el transporte público, hay más retrasos en el metro.</li>
+      <li>Tras lanzar una app de meditación, los usuarios que meditan más declaran menos estrés (datos observacionales).</li>
+      <li>El número de ahogamientos en piscinas correlaciona con las taquillas de cierto género de cine en series largas de años.</li>
+    </ol>
+
+    <h2>Ejercicio 2 – Reescribir el claim</h2>
+    <p>Reescribe cada frase de forma estadísticamente correcta:</p>
+    <ol>
+      <li>«Demostramos que estudiar más causa mejores calificaciones (r = 0.72).»</li>
+      <li>«Como p &lt; 0.01, la publicidad digital genera las ventas.»</li>
+      <li>«No hay ninguna relación entre turno y defectos (p = 0.08).»</li>
+    </ol>
+
+    <h2>Ejercicio 3 – Diseño</h2>
+    <p>Una empresa observa que los empleados con más cursos internos tienen mejor evaluación anual.</p>
+    <ol>
+      <li>Propón al menos dos explicaciones no causales (o de causalidad inversa).</li>
+      <li>Describe un diseño (aunque sea simplificado) que acercaría más a estimar el efecto causal de la capacitación.</li>
+    </ol>
+
+    <h2>Ejercicio 4 – Checklist aplicado</h2>
+    <p>Un compañero presenta: «ρ = 0.55 entre precio del menú y propina media; hay que subir precios para subir propinas.»</p>
+    <ol>
+      <li>Lista al menos cuatro preguntas o objeciones que le harías usando el checklist del tema.</li>
+      <li>Redacta una versión mejorada de su conclusión (4–6 líneas).</li>
+    </ol>
+
+    <h2>Ejercicio 5 – Caso integral</h2>
+    <p>
+      Un municipio encuentra correlación positiva entre número de cámaras de vigilancia instaladas
+      y número de delitos registrados por zona.
+    </p>
+    <ol>
+      <li>¿Por qué sería un error concluir que “las cámaras aumentan el delito”?</li>
+      <li>Da dos interpretaciones alternativas plausibles.</li>
+      <li>¿Qué información adicional pedirías antes de una decisión de política pública?</li>
+    </ol>
+
+    <div class="card success" style="margin-top:2rem;">
+      <p>Complementa con la simulación de confusora en el notebook.</p>
+      <a class="btn" href="../practica/practica_causalidad.ipynb" download>Descargar notebook</a>
+      <a class="btn btn-outline" href="../index.html">Volver al inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Material generado para la asignatura GAD-2401 · Uso educativo</p>
+  </footer>
+</body>
+</html>

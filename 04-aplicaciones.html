@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4. Aplicaciones | Correlación y causalidad</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>2.3 Correlación y causalidad</h1>
+      <p>2.3.1 Aplicaciones</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="index.html">Inicio</a>
+      <a href="01-introduccion.html">1. Introducción</a>
+      <a href="02-por-que-falla.html">2. Por qué falla</a>
+      <a href="03-hacia-causalidad.html">3. Hacia la causalidad</a>
+      <a href="04-aplicaciones.html" class="active">4. Aplicaciones</a>
+      <a href="05-buenas-practicas.html">5. Buenas prácticas</a>
+      <a href="ejercicios/ejercicios-manuales.html">Ejercicios</a>
+    </div>
+  </nav>
+
+  <main>
+    <h2>Empresa / producto digital</h2>
+    <div class="card">
+      <p>
+        <strong>Hallazgo correlacional:</strong> tiempo de carga de la página y tasa de conversión
+        correlacionan negativamente (páginas más lentas ↔ menos conversiones).
+      </p>
+      <ul>
+        <li><strong>Tentación incorrecta:</strong> «Si reducimos 1 s el tiempo de carga, las ventas subirán X %» (como si fuera causal demostrado).</li>
+        <li><strong>Enfoque correcto:</strong> la correlación justifica un A/B test o una mejora técnica priorizada; la magnitud causal se estima con experimentación.</li>
+        <li><strong>Confusoras posibles:</strong> tipo de dispositivo, calidad del tráfico de la campaña, complejidad del checkout.</li>
+      </ul>
+    </div>
+
+    <h2>Marketing</h2>
+    <div class="card">
+      <p>
+        Inversión publicitaria y ventas mensuales correlacionan positivamente.
+      </p>
+      <ul>
+        <li>Puede haber causalidad parcial real, pero también estacionalidad (ambas suben en diciembre).</li>
+        <li>Sin controlar temporada, canal y precio, el coeficiente mezcla efectos.</li>
+        <li>Mejor práctica: modelos con controles + experimentos de presupuesto cuando sea viable.</li>
+      </ul>
+    </div>
+
+    <h2>Salud pública</h2>
+    <div class="card">
+      <p>
+        Estudios observacionales asocian consumo de cierto alimento con menor riesgo de enfermedad.
+      </p>
+      <ul>
+        <li>Antes de recomendar cambios poblacionales hace falta más evidencia (confusoras de estilo de vida, genética, etc.).</li>
+        <li>La correlación orienta la investigación; no sustituye ensayos ni revisiones sistemáticas.</li>
+      </ul>
+    </div>
+
+    <h2>Políticas públicas / educación</h2>
+    <div class="card">
+      <p>
+        Gasto en educación y crecimiento económico correlacionan en datos de países.
+      </p>
+      <ul>
+        <li>Dirección causal ambigua (¿el gasto impulsa el crecimiento o los países ricos gastan más?).</li>
+        <li>Diseños cuidadosos y evidencia acumulada son necesarios para afirmar impacto de una política.</li>
+      </ul>
+    </div>
+
+    <h2>Recursos humanos</h2>
+    <div class="card">
+      <p>
+        Empleados con más horas de capacitación tienen mejores evaluaciones de desempeño.
+      </p>
+      <ul>
+        <li>¿La capacitación mejora el desempeño, o se capacita más a quienes ya rinden mejor?</li>
+        <li>Causalidad inversa y selección son hipótesis rivales a contrastar.</li>
+      </ul>
+    </div>
+
+    <h2>Qué sí puedes hacer con correlación en el trabajo</h2>
+    <table>
+      <thead>
+        <tr><th>Uso legítimo</th><th>Uso abusivo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Priorizar hipótesis</td><td>Afirmar impacto garantizado de una intervención</td></tr>
+        <tr><td>Detectar anomalías y patrones</td><td>Ignorar confusoras obvias</td></tr>
+        <tr><td>Comunicar asociación con matices</td><td>Titulares del tipo «X causa Y» sin diseño</td></tr>
+        <tr><td>Diseñar el siguiente experimento</td><td>Cerrar el caso solo con un heatmap</td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:2rem;">
+      <a class="btn btn-outline" href="03-hacia-causalidad.html">← Anterior</a>
+      <a class="btn" href="05-buenas-practicas.html">Siguiente: Buenas prácticas →</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>Material generado para la asignatura GAD-2401 · Uso educativo</p>
+  </footer>
+</body>
+</html>

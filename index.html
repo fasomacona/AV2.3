@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.3 Correlación y causalidad | GAD-2401</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>2.3 Correlación y causalidad</h1>
+      <p>Análisis y visualización de datos (GAD-2401) · Asociación ≠ causa-efecto</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="01-introduccion.html">1. Introducción</a>
+      <a href="02-por-que-falla.html">2. Por qué falla</a>
+      <a href="03-hacia-causalidad.html">3. Hacia la causalidad</a>
+      <a href="04-aplicaciones.html">4. Aplicaciones</a>
+      <a href="05-buenas-practicas.html">5. Buenas prácticas</a>
+      <a href="ejercicios/ejercicios-manuales.html">Ejercicios</a>
+    </div>
+  </nav>
+
+  <main>
+    <h2>Bienvenido al tema</h2>
+    <p>
+      Una de las trampas más frecuentes en el análisis de datos es tratar una
+      <strong>correlación</strong> (o cualquier asociación estadística) como si demostrara
+      <strong>causalidad</strong>. Este tema formaliza la diferencia, muestra los mecanismos
+      que generan asociaciones engañosas y ofrece criterios para comunicar resultados con rigor.
+    </p>
+
+    <div class="card highlight">
+      <h3 style="margin-top:0;">Frase clave</h3>
+      <p style="margin:0; font-size:1.15rem; font-style:italic;">
+        «Correlación no implica causalidad.»
+      </p>
+    </div>
+
+    <div class="card highlight">
+      <h3 style="margin-top:0;">Objetivos de aprendizaje</h3>
+      <ol>
+        <li>Distinguir con claridad correlación (asociación) y causalidad (causa-efecto).</li>
+        <li>Identificar confusoras, causalidad inversa y correlaciones espurias.</li>
+        <li>Conocer vías para fortalecer evidencia causal (experimentos, longitudinal, control de variables).</li>
+        <li>Aplicar el razonamiento a casos de negocio, salud y políticas públicas (2.3.1).</li>
+        <li>Redactar conclusiones honestas a partir de análisis correlacionales.</li>
+      </ol>
+    </div>
+
+    <h2>Contenido</h2>
+    <div class="grid">
+      <div class="card">
+        <h4><a href="01-introduccion.html">1. Introducción</a></h4>
+        <p>Qué mide cada concepto y por qué se confunden.</p>
+      </div>
+      <div class="card">
+        <h4><a href="02-por-que-falla.html">2. Por qué la correlación no basta</a></h4>
+        <p>Confusoras, causalidad inversa y coincidencias.</p>
+      </div>
+      <div class="card">
+        <h4><a href="03-hacia-causalidad.html">3. Hacia la causalidad</a></h4>
+        <p>Condiciones y diseños que acercan a la causa-efecto.</p>
+      </div>
+      <div class="card">
+        <h4><a href="04-aplicaciones.html">4. Aplicaciones</a></h4>
+        <p>Casos empresariales, salud y políticas (2.3.1).</p>
+      </div>
+      <div class="card">
+        <h4><a href="05-buenas-practicas.html">5. Buenas prácticas</a></h4>
+        <p>Checklist del analista y plantillas de redacción.</p>
+      </div>
+      <div class="card">
+        <h4><a href="ejercicios/ejercicios-manuales.html">Ejercicios</a></h4>
+        <p>Casos para razonar en el cuaderno.</p>
+      </div>
+    </div>
+
+    <h2>Práctica en Jupyter</h2>
+    <div class="card success">
+      <p>
+        Simulaciones de confusoras, correlaciones engañosas y contraste entre asociación
+        observada y mecanismo real.
+      </p>
+      <a class="btn" href="practica/practica_causalidad.ipynb" download>Descargar practica_causalidad.ipynb</a>
+      <p style="margin-top:1rem; font-size:0.9rem; color:var(--text-light);">
+        Ábrelo en <a href="https://colab.research.google.com" target="_blank">Google Colab</a>
+      </p>
+    </div>
+
+    <div class="nota">
+      <strong>Prerrequisitos:</strong> Temas 2.1 (Pearson, Spearman, Kendall) y 2.2 (chi-cuadrada).
+      La correlación es útil; este tema enseña a no sobreinterpretarla.
+    </div>
+  </main>
+
+  <footer>
+    <p>Material generado para la asignatura GAD-2401 · Uso educativo · 2026</p>
+  </footer>
+</body>
+</html>

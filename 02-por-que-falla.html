@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2. Por qué falla | Correlación y causalidad</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>2.3 Correlación y causalidad</h1>
+      <p>2. Por qué la correlación no basta</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="index.html">Inicio</a>
+      <a href="01-introduccion.html">1. Introducción</a>
+      <a href="02-por-que-falla.html" class="active">2. Por qué falla</a>
+      <a href="03-hacia-causalidad.html">3. Hacia la causalidad</a>
+      <a href="04-aplicaciones.html">4. Aplicaciones</a>
+      <a href="05-buenas-practicas.html">5. Buenas prácticas</a>
+      <a href="ejercicios/ejercicios-manuales.html">Ejercicios</a>
+    </div>
+  </nav>
+
+  <main>
+    <h2>1. Variable confusora (confounding)</h2>
+    <p>
+      Una <strong>tercera variable</strong> \( Z \) influye en \( X \) y en \( Y \). Observamos correlación
+      entre \( X \) e \( Y \), pero el motor real es \( Z \).
+    </p>
+    <div class="card warning">
+      <p><strong>Ejemplo clásico:</strong> consumo de helado y ataques de tiburón correlacionan positivamente.</p>
+      <p style="margin-bottom:0;">
+        No es que el helado cause ataques. La confusora es el <strong>calor / verano</strong>:
+        más gente en la playa y más consumo de helado.
+      </p>
+    </div>
+    <p>
+      En negocio: “número de vendedores” y “ventas” pueden correlacionar porque ambos crecen con el
+      tamaño de la región o la temporada, no solo porque “más vendedores causan más ventas” en el margen.
+    </p>
+
+    <h2>2. Causalidad inversa</h2>
+    <p>
+      La dirección del efecto es la opuesta a la que imaginamos: \( Y \) causa \( X \), no al revés.
+    </p>
+    <div class="card warning">
+      <p><strong>Ejemplo:</strong> más bomberos en un incendio se asocian con más daño material.</p>
+      <p style="margin-bottom:0;">
+        No es que los bomberos “causen” el daño: los incendios grandes requieren más bomberos
+        <em>y</em> producen más daño.
+      </p>
+    </div>
+
+    <h2>3. Correlaciones espurias (casualidad / sobreexploración)</h2>
+    <p>
+      Con muchas variables y muchas pruebas, aparecerán asociaciones “significativas” por azar
+      (problema de múltiples comparaciones). También hay series temporales que covarían sin vínculo real.
+    </p>
+    <div class="card">
+      <p>Ejemplos famosos de correlaciones absurdas (series largas sin mecanismo):</p>
+      <ul style="margin-bottom:0;">
+        <li>Consumo de queso y muertes por enredarse en sábanas.</li>
+        <li>Número de películas de un actor y ahogamientos en piscinas.</li>
+      </ul>
+    </div>
+    <p>
+      La lección no es “no calcular correlaciones”, sino <strong>no creerse un coeficiente sin teoría,
+      diseño y replicación</strong>.
+    </p>
+
+    <h2>4. Selección y restricción de muestra</h2>
+    <p>
+      Si solo analizas un subgrupo especial (solo clientes premium, solo alumnos de alto rendimiento),
+      la correlación observada puede no generalizarse o incluso invertirse respecto a la población completa.
+    </p>
+
+    <h2>Esquema mental</h2>
+    <table>
+      <thead>
+        <tr><th>Mecanismo</th><th>Qué ocurre</th><th>Pregunta que debes hacerte</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Confusora</td><td>Z mueve X e Y</td><td>¿Qué otra variable podría explicar ambas?</td></tr>
+        <tr><td>Causalidad inversa</td><td>Y → X, no X → Y</td><td>¿Cuál ocurre primero en el tiempo?</td></tr>
+        <tr><td>Espuria</td><td>Azar o tendencias comunes</td><td>¿Hay mecanismo plausible? ¿Se replica?</td></tr>
+        <tr><td>Selección</td><td>Muestra sesgada</td><td>¿A quién representa esta muestra?</td></tr>
+      </tbody>
+    </table>
+
+    <div class="nota">
+      Detectar estos problemas es trabajo de <strong>pensamiento crítico</strong> tanto como de software.
+      El notebook de práctica simula una confusora para ver cómo aparece una correlación “falsa”.
+    </div>
+
+    <p style="margin-top:2rem;">
+      <a class="btn btn-outline" href="01-introduccion.html">← Anterior</a>
+      <a class="btn" href="03-hacia-causalidad.html">Siguiente: Hacia la causalidad →</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>Material generado para la asignatura GAD-2401 · Uso educativo</p>
+  </footer>
+</body>
+</html>

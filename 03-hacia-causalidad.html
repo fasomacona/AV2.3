@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3. Hacia la causalidad | Correlación y causalidad</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>2.3 Correlación y causalidad</h1>
+      <p>3. Cómo acercarse a la causalidad</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="index.html">Inicio</a>
+      <a href="01-introduccion.html">1. Introducción</a>
+      <a href="02-por-que-falla.html">2. Por qué falla</a>
+      <a href="03-hacia-causalidad.html" class="active">3. Hacia la causalidad</a>
+      <a href="04-aplicaciones.html">4. Aplicaciones</a>
+      <a href="05-buenas-practicas.html">5. Buenas prácticas</a>
+      <a href="ejercicios/ejercicios-manuales.html">Ejercicios</a>
+    </div>
+  </nav>
+
+  <main>
+    <h2>Condiciones clásicas (orientativas)</h2>
+    <p>Para argumentar que \( X \) causa \( Y \) suele pedirse, al menos:</p>
+    <ol>
+      <li><strong>Asociación:</strong> \( X \) e \( Y \) covarían (aquí entra la correlación).</li>
+      <li><strong>Temporalidad:</strong> el cambio en \( X \) precede al de \( Y \).</li>
+      <li><strong>No confusión:</strong> se controlan o eliminan explicaciones alternativas (confusoras).</li>
+      <li><strong>Mecanismo plausible:</strong> hay una historia teórica o empírica creíble.</li>
+    </ol>
+    <p>
+      Cumplir (1) es necesario pero no suficiente. Los puntos (2)–(4) exigen diseño y conocimiento del dominio.
+    </p>
+
+    <h2>Diseños que fortalecen la evidencia causal</h2>
+
+    <h3>1. Experimentos controlados aleatorizados (RCT / A/B tests)</h3>
+    <div class="card highlight">
+      <p style="margin-bottom:0;">
+        Se asigna al azar quién recibe el “tratamiento” (nueva app, dosis, precio…).
+        La aleatorización equilibra, en promedio, las confusoras observadas y no observadas.
+        En producto digital, el <strong>A/B test</strong> es la versión cotidiana del experimento.
+      </p>
+    </div>
+
+    <h3>2. Estudios longitudinales</h3>
+    <p>
+      Seguir las mismas unidades en el tiempo ayuda a ver qué ocurre primero y cómo evolucionan
+      las variables (aunque no elimina sola todas las confusoras).
+    </p>
+
+    <h3>3. Métodos cuasi-experimentales</h3>
+    <ul>
+      <li>Diferencias en diferencias</li>
+      <li>Regresión discontinua</li>
+      <li>Variables instrumentales</li>
+      <li>Matching / propensity scores</li>
+    </ul>
+    <p>
+      Se usan cuando no se puede aleatorizar, pero existe una variación “casi experimental” en el mundo real.
+    </p>
+
+    <h3>4. Control estadístico de confusoras</h3>
+    <p>
+      En regresión múltiple u otros modelos se incluyen covariables. Ayuda, pero
+      <strong>no garantiza</strong> causalidad: pueden faltar confusoras o medirse mal.
+    </p>
+
+    <h3>5. Marcos causales modernos</h3>
+    <p>
+      Grafos dirigidos acíclicos (DAGs), resultados potenciales (<em>potential outcomes</em>).
+      Sirven para explicitar supuestos: qué se asume que causa qué, y qué hay que ajustar.
+    </p>
+
+    <h2>Rol de la correlación en este panorama</h2>
+    <table>
+      <thead>
+        <tr><th>Etapa</th><th>Papel de la correlación</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Exploración (EDA)</td><td>Detectar asociaciones candidatas</td></tr>
+        <tr><td>Generación de hipótesis</td><td>Priorizar qué estudiar con mejor diseño</td></tr>
+        <tr><td>Diagnóstico de modelos</td><td>Multicolinealidad, variables relacionadas</td></tr>
+        <tr><td>Prueba causal definitiva</td><td>Por sí sola, <strong>insuficiente</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="nota">
+      En esta asignatura el énfasis es usar bien la correlación y <strong>no sobreclaim</strong>.
+      Los métodos causales avanzados se profundizan en cursos de econometría, causal inference o experimentación.
+    </div>
+
+    <p style="margin-top:2rem;">
+      <a class="btn btn-outline" href="02-por-que-falla.html">← Anterior</a>
+      <a class="btn" href="04-aplicaciones.html">Siguiente: Aplicaciones →</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>Material generado para la asignatura GAD-2401 · Uso educativo</p>
+  </footer>
+</body>
+</html>
